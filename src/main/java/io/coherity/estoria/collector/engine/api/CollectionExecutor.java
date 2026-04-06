@@ -1,8 +1,10 @@
 package io.coherity.estoria.collector.engine.api;
 
-import io.coherity.estoria.collector.spi.ProviderSession;
+import io.coherity.estoria.collector.spi.ProviderContext;
 
 public interface CollectionExecutor
 {
-    CollectionRun collect(CollectionPlan collectionPlan, ProviderSession session) throws ExecutionException;
+    CollectionRun collect(CollectionPlan collectionPlan, ProviderContext providerContext) throws ExecutionException;
+    CollectionRun getCollectedRun(String runId) throws ExecutionException;
+    
 }

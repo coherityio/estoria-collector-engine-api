@@ -1,11 +1,11 @@
 package io.coherity.estoria.collector.engine.api;
 
-import io.coherity.estoria.collector.spi.CollectionScope;
+import io.coherity.estoria.collector.spi.CollectorContext;
 
 public interface ProviderSnapshot
 {
     String getProviderId();
-    CollectionScope getCollectionScope();
+    CollectorContext getCollectionScope();
     ProviderSnapshotSummary getProviderSnapshotSummary();
     long getEntityCount();
     long getEntityCountByType(String entityType);
