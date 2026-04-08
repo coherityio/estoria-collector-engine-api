@@ -1,9 +1,9 @@
 package io.coherity.estoria.collector.engine.api;
 
-import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 import io.coherity.estoria.collector.spi.CloudProvider;
-import io.coherity.estoria.collector.spi.Collector;
 
 // CollectionEngine is the registration point for all CloudProviders and Collectors.
 // It is also the factory for all CollectionPlanners, CollectionExectors and SnapshotBuilders.
@@ -14,6 +14,7 @@ public interface CollectorEngine
     CollectionExecutor getExecutor();
     SnapshotBuilder getSnapshotBuilder();
     
-    List<CloudProvider> getLoadedCloudProviders();
-    List<Collector> getLoadedCollectors(String providerId);
+    Set<CloudProvider> getLoadedCloudProviders();
+    Optional<CloudProvider> getLoadedCloudProvider(String providerId);
+    Set<String> getRegisteredEntityTypes(String providerId);
 }

@@ -4,7 +4,6 @@ import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
-import io.coherity.estoria.collector.spi.CollectorContext;
 import io.coherity.estoria.collector.spi.ProviderContext;
 
 public interface CollectionRun
